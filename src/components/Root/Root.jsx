@@ -1,12 +1,18 @@
 import React from "react";
 import Header from "../Header/Header";
 import { Outlet } from "react-router";
-
+import Footer from "../Footer/footer";
+import SideBar from "../SideBar/SideBar";
+import "./Root.css";
 const Root = () => {
   return (
     <div>
       <Header></Header>
-      <Outlet></Outlet>
+      <div className="root-main">
+        <SideBar></SideBar>
+        <Outlet></Outlet>
+      </div>
+      <Footer></Footer>
     </div>
   );
 };
